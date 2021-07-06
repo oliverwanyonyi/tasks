@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to dos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+  </head>
+  <body>
+    <section id="main">
+    			<nav>
+    							<span class="day">Sunday</span>
+    						  <div class="menu-btn">
+                <span class="line"></span><span class="line"></span
+                ><span class="line"></span>
+              </div>
+    			</nav>
+      <div class="todo-wrapper container">
+        <h1>manage your tasks</h1>
+
+        <form action="" id="form">
+          <input
+            type="text"
+            class="input"
+            id="input"
+            placeholder="add task"
+            autocomplete="off"
+          />
+          <input type="submit" id="submit" />
+          <label for="submit" class="add"><i class="fas fa-plus"></i></label>
+
+          <ul class="todos" id="todos">
+            <!--
+            <li>
+              Keg
+              <div class="icons">
+                <span class="complete"><i class="fas fa-check"></i></span>
+                <span class="delete"><i class="fas fa-trash"></i></span>
+              </div>
+            </li>
+            -->
+          </ul>
+        </form>
+       <div class = "container">
+        <div class="task-summary">
+          <h3>Added tasks : <span class="added-task"> 0</span></h3>
+          <h3>Complete tasks : <span class="completed-task">0</span></h3>
+          <h3>Incomplete tasks : <span class="incomplete-task">0</span></h3>
+        </div>
+      </div>
+      <div class="clearall-btn">
+      				clear all
+      </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
