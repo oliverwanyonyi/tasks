@@ -40,35 +40,45 @@ function addTodo(todo) {
  <span>  ${todoText} </span>
 
     <div class="icons">
-    <span class="complete"><i class="fas fa-check"></i></span>
+    <label class="complete checkbox">
+    <input type="checkbox" / unchecked>
+    <span class="checkmark"></span>
+  </label>
     <span class="delete"><i class="fas fa-trash"></i></span>
   </div> `;
 
     const completeBtn =
       todoEL.firstElementChild.nextElementSibling.firstElementChild;
-    completeBtn.addEventListener("click", function () {
-      todoEL.classList.toggle("completed");
-      updateLs();
-    });
-
+    updateCompletedTasks(completeBtn, todoEL);
     const deleteBtn =
       todoEL.firstElementChild.nextElementSibling.firstElementChild
         .nextElementSibling;
+    removeTasks(deleteBtn, todoEL);
 
-    deleteBtn.addEventListener("click", () => {
-      todoEL.remove();
-      updateLs();
-    });
-
-    clearallbtn.addEventListener("click", function () {
-      todoEL.remove();
-      updateLs();
-    });
     todosUl.appendChild(todoEL);
-    input.value = "";
 
+    input.value = "";
     updateLs();
   }
+}
+
+function updateCompletedTasks(completeBtn, todoEL) {
+  completeBtn.addEventListener("click", function () {
+    todoEL.classList.toggle("completed");
+    updateLs();
+  });
+}
+
+function removeTasks(deleteBtn, todoEL) {
+  deleteBtn.addEventListener("click", () => {
+    todoEL.remove();
+    updateLs();
+  });
+
+  clearallbtn.addEventListener("click", function () {
+    todoEL.remove();
+    updateLs();
+  });
 }
 
 function updateLs() {
@@ -86,6 +96,7 @@ function updateLs() {
 
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
 function countTasks(todos) {
   added.innerText = todos.length;
   const completedTaskArray = todos.filter((task) => task.completed === true);

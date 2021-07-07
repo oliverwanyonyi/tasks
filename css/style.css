@@ -93,9 +93,7 @@ ul li {
   position: relative;
   transition: 600ms ease-in-out;
 }
-ul li span {
-  display: block;
-}
+
 .container {
   max-width: 90vw;
   width: 100%;
@@ -167,11 +165,46 @@ form .add {
   background: #292929;
   transition: 0.2s;
 }
-.complete:hover {
-  background: #05cdf0;
+.checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox > span {
+  color: #20202b;
+  padding: 0.5rem 0.25rem;
+}
+.checkbox > input {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #dbaefa;
+  border-radius: 4px;
+  outline: 0;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.checkbox > input:checked {
+  background: #dbaefa;
+}
+.checkbox > input:checked + span::before {
+  content: "\2713";
+  display: block;
+  position: absolute;
+  text-align: center;
+  left: 0.7rem;
+  top: 0.3rem;
+  color: #202020;
+}
+.checkbox > input:active {
+  border: 2px solid #ececec;
 }
 .delete:hover {
-  background: #f10c04;
+  background: #c51610;
 }
 input {
   width: 100%;
