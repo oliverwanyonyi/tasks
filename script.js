@@ -18,6 +18,7 @@ if (todos) {
 }
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   addTodo();
 });
 
@@ -31,7 +32,7 @@ function addTodo(todo) {
 
   if (todoText) {
     const todoEL = document.createElement("li");
-    todoEL.innerHTML = "";
+
     if (todo && todo.completed) {
       todoEL.classList.add("completed");
     }
@@ -40,10 +41,7 @@ function addTodo(todo) {
  <span>  ${todoText} </span>
 
     <div class="icons">
-    <label class="complete checkbox">
-    <input type="checkbox" / unchecked>
-    <span class="checkmark"></span>
-  </label>
+    <span class="checkbox"><i class="fas fa-check"></i></span>
     <span class="delete"><i class="fas fa-trash"></i></span>
   </div> `;
 
@@ -65,6 +63,13 @@ function addTodo(todo) {
 function updateCompletedTasks(completeBtn, todoEL) {
   completeBtn.addEventListener("click", function () {
     todoEL.classList.toggle("completed");
+
+    if (todoEL.classList.contains("completed")) {
+      this.classList.add("active");
+    } else {
+      this.classList.remove("active");
+    }
+
     updateLs();
   });
 }

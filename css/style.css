@@ -156,7 +156,7 @@ form .add {
   top: 50%;
   transform: translateY(-50%);
 }
-.icons span {
+.icons .delete {
   font-size: 0.9rem;
   padding: 0.3rem 0.7rem;
   border-radius: 0.1rem;
@@ -165,44 +165,30 @@ form .add {
   background: #292929;
   transition: 0.2s;
 }
+
 .checkbox {
-  display: inline-flex;
-  cursor: pointer;
-  position: relative;
-}
-.checkbox > span {
-  color: #20202b;
-  padding: 0.5rem 0.25rem;
-}
-.checkbox > input {
-  height: 25px;
-  width: 25px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  border: 1px solid #dbaefa;
-  border-radius: 4px;
-  outline: 0;
   background: #ffffff;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
-}
-.checkbox > input:checked {
-  background: #dbaefa;
-}
-.checkbox > input:checked + span::before {
-  content: "\2713";
-  display: block;
-  position: absolute;
   text-align: center;
-  left: 0.7rem;
-  top: 0.3rem;
-  color: #202020;
+  height: 23px;
+  font-size: 0.9rem;
+  width: 28px;
+  line-height: 23px;
+  border-radius: 0.2rem;
+  border: 1px solid #7ef7d9;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
-.checkbox > input:active {
-  border: 2px solid #ececec;
+.checkbox i {
+  opacity: 0;
 }
+.checkbox.active {
+  background: #7ef7d9;
+  color: #fff;
+}
+.checkbox.active i {
+  opacity: 1;
+}
+
 .delete:hover {
   background: #c51610;
 }
