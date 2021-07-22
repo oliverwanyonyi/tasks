@@ -41,8 +41,8 @@ function addTodo(todo) {
  <span>  ${todoText} </span>
 
     <div class="icons">
-    <span class="checkbox"><i class="fas fa-check"></i></span>
-    <span class="delete"><i class="fas fa-trash"></i></span>
+    <span class="checkbox"><i class="bx bx-check"></i></span>
+    <span class="delete"><i class="bx bx-trash"></i></span>
   </div> `;
 
     const completeBtn =
