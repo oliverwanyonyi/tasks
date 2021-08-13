@@ -1,23 +1,23 @@
-# Todos
+## Todos
 
-## Description
+### Description
 
 todos coded with html css and javascript
 
-## 💡features
+### 💡features
 
-### 1.user can add a task
+1.user can add a task
 
-### 2.user can mark task as completed
+2.user can mark task as completed
 
-### 3.user can delete a task
+3.user can delete a task
 
-### 4.user data persists in the browser even after reloading
+4.user data persists in the browser even after reloading
 
-## 🛠Tools
+### 🛠Tools
 
-### 1.html for markup
+1.html for markup
 
-### 2.css for styling
+2.css for styling
 
-### 3.javascript for the functionality
+3.javascript for the functionality
